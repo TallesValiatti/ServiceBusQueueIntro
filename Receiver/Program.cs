@@ -24,6 +24,9 @@ namespace Receiver
             Console.WriteLine("\nStopping the receiver ...");
             await receiver.StopProcessingAsync();
             Console.WriteLine("\nStopped receiving messages");
+
+            await receiver.DisposeAsync();
+            await client.DisposeAsync();
         }       
 
         static async Task MessageHandler(ProcessMessageEventArgs args)
