@@ -6,8 +6,8 @@ namespace Sender
 {
     static class Program 
     {
-        private const string queueName =  "sbq-main-queue-eastus2";
-        private const string connectionString =  "<Queue-Name>";
+        private const string queueName =  "<Queue-Name>";
+        private const string connectionString =  "<Connection-String>";
         static async Task Main()
         {
             var client = new ServiceBusClient(connectionString);
